@@ -1,1 +1,21 @@
 <html>
+  <head>
+    <title>HTTP PUT request test</title>
+  </head>
+  <body>
+    <textarea id="what">This text to be put</textare>
+    <input type="button" value="put" onclick="putt()">
+  </body>
+  <script>
+    function putt(){
+      const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'text/plain' },
+        body: document.querySelector('#what').value
+      };
+      fetch('https://pincescpu987.github.io/stuff/1/', requestOptions)
+        .then(response => response.text())
+        .then(data => alert(data.updatedAt) );
+    }
+  </script>
+</html>
