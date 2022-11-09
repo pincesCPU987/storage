@@ -13,7 +13,7 @@
         headers: { 'Content-Type': 'text/plain' },
         body: document.querySelector('#what').value
       };
-      fetch('https://pincescpu987.github.io/stuff/1/', requestOptions)
+      fetch('https://pincescpu987.github.io/stuff/1', requestOptions)
         .then(response => response.text())
         .then(data => alert(data.updatedAt) );
     }
